@@ -4,10 +4,14 @@ import os
 import openai
 import streamlit as st
 from streamlit_chat import message
-from Bot import jolly, append_interaction_to_chat_log
+from Bot import jolly, session_prompt
+from Sentiment import sentiment
 
-openai.api_key = "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"
-print(os.getenv('OPENAI_API_KEY'))
+openai.api_key = os.getenv('OPENAI_API_KEY')
+
+
+start_sequence = "\nJolly:"
+restart_sequence = "\n\nPerson:"
 
 st.set_page_config(
     page_icon='🏢',
@@ -20,13 +24,13 @@ st.set_page_config(
         'Report a bug': "https://github.com",
     }
 )
-st.title("Attorney ChatBot")
+st.title("Attorney GPT-3 ChatBot")
 
 st.sidebar.title("🏢 Attorney Chatbot")
 st.sidebar.markdown("""
 
 **Feedback/Questions**:
-[Githhub](https://github.com)
+[Github](https://github.com)
 """)
 
 if 'generated' not in st.session_state:
@@ -35,14 +39,27 @@ if 'generated' not in st.session_state:
 if 'past' not in st.session_state:
     st.session_state['past'] = []
 
+if 'chat_log' not in st.session_state:
+    st.session_state['chat_log'] = session_prompt
+
+chat_log = st.session_state['chat_log']
+
+
+def append_interaction_to_chat_log(question, answer, chat_log=None):
+    if chat_log is None:
+        chat_log = session_prompt
+        return f'{chat_log}{restart_sequence} {question}{start_sequence}{answer}'
+
 
 question = st.text_input("Say Something to the Chatbot:",
                          value='Hello Jolly')
 message(question, is_user=True)
 
-answer = jolly(question)
-message(answer)
+answer = jolly(question, chat_log)
 
+# printing the Answer
+chat_log = append_interaction_to_chat_log(question, answer, chat_log)
+message(answer)
 
 with st.expander("Not sure what to ask?"):
     st.markdown("""
