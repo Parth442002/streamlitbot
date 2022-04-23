@@ -57,7 +57,8 @@ Chatbot:<br>
  -Streamlit<br>
  -NLTK<br>
 
-
+# Api
+[Deployed Api](https://lawyerbot-sprint.herokuapp.com/)
 
 ## Collaborators 🤖
 
