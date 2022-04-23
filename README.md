@@ -42,7 +42,7 @@ Website: <br>
 
 
 App: <br>
-![image](https://user-images.githubusercontent.com/75015574/164884793-ec544352-23d6-4f96-842b-c360fa2c7334.png)
+!![image](https://user-images.githubusercontent.com/75015574/164885014-c72731ef-8612-48e5-9b1f-e690d3240754.png)
 
 
 Chatbot:<br>
