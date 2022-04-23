@@ -15,13 +15,13 @@ Chatbot - Legal, Tax and Compliance: <br>
 Gather millions of pages of information quickly and democratize legal, tax and compliance
 Your application should allow users to ask questions to a bot and the bot should be capable of answering questions based on the knowledge it has gained from the central acts
 Your model can be based on a few acts. For example
-Right of persons with disabilities act
-The black money and imposition of tax act
-The Sexual harassment of Women at workplace act
-The prohibition of child marriage act
+Right of persons with disabilities act<br>
+The black money and imposition of tax act<br>
+The Sexual harassment of Women at workplace act<br>
+The prohibition of child marriage act<br>
 You could demonstrate your chat bot by asking relevant questions. You need not try to comprehend all laws
-Reference: List of Central Acts in PDF
-Bonus Points-
+Reference:<br> List of Central Acts in PDF
+Bonus Points-<br>
 If your bot is able to respond to voice in addition to text
 
 ### Our solution 📝
