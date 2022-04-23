@@ -50,12 +50,12 @@ Chatbot:<br>
 
 
 ## Technology Stack 💻
- -Django
- -Flutter
- -JWT
- -Python
- -Streamlit
- -NLTK
+ -Django<br>
+ -Flutter<br>
+ -JWT<br>
+ -Python<br>
+ -Streamlit<br>
+ -NLTK<br>
 
 
 
